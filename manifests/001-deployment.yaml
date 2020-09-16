@@ -17,13 +17,13 @@ spec:
     spec:
       containers:
         - name: phpmyadmin
-          image: phpmyadmin/phpmyadmin
+          image: bitnami/phpmyadmin
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           env:
-          - name: PMA_HOST
+          - name: DATABASE_HOST
             value: mysql
-          - name: PMA_PORT
+          - name: DATABASE_PORT_NUMBER
             value: "3306"
           - name: MYSQL_ROOT_PASSWORD
             valueFrom:
